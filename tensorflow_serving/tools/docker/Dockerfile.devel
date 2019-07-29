@@ -13,8 +13,8 @@
 # limitations under the License.
 FROM ubuntu:18.04 as base_build
 
-ENV HTTP_PROXY http://192.168.2.149:8118
-ENV HTTPS_PROXY http://192.168.2.149:8118
+ENV http_proxy http://192.168.2.149:8118
+ENV https_proxy http://192.168.2.149:8118
 
 ARG TF_SERVING_VERSION_GIT_BRANCH=master
 ARG TF_SERVING_VERSION_GIT_COMMIT=head
