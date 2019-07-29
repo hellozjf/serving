@@ -15,9 +15,6 @@
 ARG TF_SERVING_VERSION=latest
 ARG TF_SERVING_BUILD_IMAGE=tensorflow/serving:${TF_SERVING_VERSION}-devel
 
-ENV http_proxy=192.168.2.149:8118
-ENV https_proxy=192.168.2.149:8118
-
 FROM ${TF_SERVING_BUILD_IMAGE} as build_image
 FROM ubuntu:18.04
 
