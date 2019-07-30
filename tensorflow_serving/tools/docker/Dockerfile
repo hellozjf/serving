@@ -12,14 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ENV http_proxy http://192.168.2.149:8118
-ENV https_proxy http://192.168.2.149:8118
-
 ARG TF_SERVING_VERSION=latest
 ARG TF_SERVING_BUILD_IMAGE=tensorflow/serving:${TF_SERVING_VERSION}-devel
 
 FROM ${TF_SERVING_BUILD_IMAGE} as build_image
 FROM ubuntu:18.04
+
+ENV http_proxy http://192.168.2.149:8118
+ENV https_proxy http://192.168.2.149:8118
 
 ARG TF_SERVING_VERSION_GIT_BRANCH=master
 ARG TF_SERVING_VERSION_GIT_COMMIT=head
